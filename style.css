@@ -1,0 +1,415 @@
+@font-face {
+    font-family: "G2 Erika Mono Regular";
+    src: url("./assets/fonts/G2ErikaMono/G2ErikaMonoRegular.ttf");
+}
+
+@font-face {
+    font-family: "G2 Erika Mono Italic";
+    src: url("./assets/fonts/G2ErikaMono/G2ErikaMonoItalic.ttf");
+}
+
+@font-face {
+    font-family: "Big Daily Short Semilight";
+    src: url("./assets/fonts/bigDailyShort/bigdailyshort-semilight.otf");
+}
+
+body {
+    font-family: century-gothic, "Big Daily Short Semilight", sans-serif;
+    margin: 0 auto;
+    /* background: rgb(206, 208, 242);
+    background: rgb(190, 192, 255); */
+    background: rgb(222, 222, 222);
+}
+
+nav {
+    top: 0;
+    width: 100%;
+    height: 10.5rem;
+}
+
+#image-liquid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: normal;
+    position: absolute;
+    font-size: 6rem;
+    letter-spacing: 1rem;
+    color: black;
+    right: 2rem;
+    top: -3.8rem;
+    animation: name-slide 3s ease-out alternate;
+}
+
+@keyframes name-slide {
+    0%    { transform: translateX(30rem);}
+    100%  { transform: translateX(0rem);}
+}
+
+#about-X {
+    font-size: 25pt;
+}
+
+h2 {
+    position: absolute;
+    /* background: rgb(190, 192, 255); */
+    background: rgb(255, 255, 255);
+    color: rgb(167, 167, 167);
+    border: 4px solid rgb(167, 167, 167);
+    font-size: 17pt;
+    letter-spacing: 0.5rem;
+    top: 2.5rem;
+    left: -4.5rem;
+    padding: 0.3rem 1.25rem 1rem 1.25rem;
+    transform: rotate(90deg);
+    cursor: pointer
+}
+
+#about {
+    position: absolute;
+    background: rgb(167, 167, 167);
+    width: 35%;
+    font-size: 16pt;
+    text-indent: 0rem;
+    top: -1.4rem;
+    left: -7.7rem;
+    padding: 0.8rem 0rem 0.8rem 2.5rem;
+}
+
+br {
+    display: block;
+    content: "";
+    margin: 0.8rem 0;
+}
+
+#email {
+    font-family: century-gothic, "Big Daily Short Semilight", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.main-container {
+    background: rgb(222, 222, 222);
+    height: 50rem;
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 5.5rem;
+}
+
+.project-box {
+    height: 45rem;
+    flex: 1;
+    transition: 1.5s;
+    overflow-y: scroll;
+    /* scroll-snap-type: y mandatory; */
+}
+.project-box:hover {
+    flex: 8;
+}
+
+.main-ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* margin-left: -7rem; */
+    filter: blur(5px);
+}
+.main-ul:hover {
+    filter: blur(0px);
+}
+
+.main-li {
+    list-style: none;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    font-family: century-gothic, "Big Daily Short Semilight", sans-serif;
+    color: white;
+    font-size: 16pt;
+    font-weight: normal;
+    font-style: italic;
+    text-align: left;
+    position: absolute;
+    width: 60%;
+    margin-left: 5rem;
+    z-index: 1;
+}
+  
+/* .main-li:hover h4 {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+} */
+
+.main-image {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: scale-down;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    scroll-snap-align: start;
+}
+.main-image:hover {
+    width: 60%;
+    height: 60%;
+    border-radius: 0%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    transition: 0.5s;
+}
+
+.main-image-hovereffect {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: scale-down;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    scroll-snap-align: start;
+    cursor: pointer;
+}
+.main-image-hovereffect:hover {
+    width: 60%;
+    height: 60%;
+    border-radius: 0%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    transition: 0.5s;
+}
+
+h3 {
+    position: fixed;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    padding-left: 1rem;
+    transform: rotate(90deg);
+}
+
+#website-design {
+    position: relative;
+    border-left: 4px solid white;
+}
+#website-design h3 {
+    top: 26.5rem;
+    margin-left: -13.8rem;
+    animation: website-down 1s ease-out alternate;
+}
+@keyframes website-down {
+    0%   { transform: translateY(-50rem) rotate(90deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+}
+
+#typography-design {
+    position: relative;
+    border-left: 4px solid white;
+    margin-left: 1rem;
+}
+#typography-design h3 {
+    top: 23.4rem;
+    margin-left: -10.6rem;
+    animation: typography-down 1.5s ease-out alternate;
+}
+@keyframes typography-down {
+    0%   { transform: translateY(-50rem) rotate(90deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+}
+
+#illustration {
+    position: relative;
+    border-left: 4px solid white;
+}
+#illustration h3 {
+    top: 24rem;
+    margin-left: -11.5rem;
+    animation: typography-down 2s ease-out alternate;
+}
+@keyframes typography-down {
+    0%   { transform: translateY(-50rem) rotate(90deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+}
+
+#animation {
+    position: relative;
+    border-left: 4px solid white;
+}
+#animation h3 {
+    top: 22rem;
+    margin-left: -9.4rem;
+    animation: animation-down 2.5s ease-out alternate;
+}
+@keyframes animation-down {
+    0%   { transform: translateY(-50rem) rotate(90deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+}
+
+#lightAndShadow {
+    position: relative;
+    border-left: 4px solid white;
+}
+#lightAndShadow h3 {
+    top: 27rem;
+    margin-left: -14.5rem;
+    animation: lightandshadow-down 3s ease-out alternate;
+}
+@keyframes lightandshadow-down {
+    0%   { transform: translateY(-50rem) rotate(90deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+}
+
+#background-filter {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+.description-container {
+    position: fixed;
+    background: white;
+    box-shadow: 0rem 0rem 2rem rgb(80, 80, 80);
+    width: 40rem;
+    margin-top: -45rem;
+    margin-left: 35%;
+    margin-bottom: 4rem;
+    transition: 1s;
+    z-index: 3;
+}
+
+#cross-button {
+    display: none;
+    position: fixed;
+    color: rgb(107, 111, 227);
+    font-size: 3rem;
+    background: none;
+    border: 1px solid rgb(175, 178, 255);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-top: -42.5rem;
+    margin-left: 37%;
+    cursor: pointer;
+    z-index: 4;
+}
+
+h5 {
+    color: black;
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+    top: 1rem;
+    margin-bottom: 5rem;
+    margin-left: 15%;
+    width: 80%;
+}
+
+span {
+    font-family: century-gothic, "Big Daily Short Semilight", sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.subhead {
+    font-style: normal;
+}
+
+p {
+    color: black;
+    position: relative;
+    width: 85%;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    letter-spacing: -0.5px;
+    align-content: center;
+    text-indent: 3rem;
+    top: -2rem;
+    margin-left: 10%;
+}
+
+.“description-image-container” {
+    margin-left: 10%;
+    margin-bottom: 2rem;
+}
+
+.description-web-image {
+    width: 50%;
+    align-content: center;
+    margin-left: 20%;
+    margin-bottom: 3%;
+    cursor: pointer;
+    box-shadow: 0rem 0rem 1rem rgb(80, 80, 80);
+}
+
+.description-web-image:hover {
+    box-shadow: 0rem 0rem 3rem rgb(80, 80, 80);
+    transition: 0.5s;
+}
+
+.description-image {
+    /* transition: transform 250ms ease-out; */
+    width: 20%;
+    align-content: center;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    transition: 1s;
+    cursor: zoom-in;
+}
+
+.description-image:hover {
+    transform: scale(5);
+    transform-origin: center;
+    box-shadow: 0rem 0rem 2rem rgb(80, 80, 80);
+    margin-bottom: 20rem;
+}
+
+/* WEBSITE */
+#techCollection-container {display: none;}
+#inPraiseOfShadow-container {display: none;}
+#urbanNature-container {display: none;}
+#treasureHunt-container {display: none;}
+#musicCalendar-container {display: none;}
+#gemCollection-container {display: none;}
+
+/* TYPOGRAPHY */
+#wikibookMoon-container {display: none;}
+#interviewTrust-container {display: none;}
+#readingResponseZine-container {display: none;}
+#gameCenter-container {display: none;}
+#principlesGoodDesign-container {display: none;}
+#croppedLetters-container {display: none;}
+#surModerno-container {display: none;}
+
+/* ANIMATION */
+#by2072-container {display: none;}
+
+@media only screen and (max-width: 812px) {  
+    img {
+        width: 60%;
+        margin-left: 0.5rem;
+        padding-top: 12rem;
+    }
+    
+    h1 {
+        font-size: 4rem;
+        width: 30%;
+        line-height: 6rem;
+        display: flex;
+        text-align: right;
+        left: 8.5rem;
+        top: 12rem;
+    }
+}
