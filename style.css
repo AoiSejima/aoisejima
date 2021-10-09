@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: "G2 Erika Mono Regular";
     src: url("./assets/fonts/G2ErikaMono/G2ErikaMonoRegular.ttf");
 }
@@ -11,14 +11,21 @@
 @font-face {
     font-family: "Big Daily Short Semilight";
     src: url("./assets/fonts/bigDailyShort/bigdailyshort-semilight.otf");
+} */
+
+@font-face {
+    font-family: "Sacramento";
+    src: url("./assets/fonts/Sacramento/Sacramento-Regular.ttf");
+}
+@font-face {
+    font-family: "Pro Grotesk Light";
+    src: url("./assets/fonts/postGrotesk/PostGrotesk-Light.ttf");
 }
 
 body {
     font-family: century-gothic, "Big Daily Short Semilight", sans-serif;
     margin: 0 auto;
-    /* background: rgb(206, 208, 242);
-    background: rgb(190, 192, 255); */
-    background: rgb(222, 222, 222);
+    background-image: url("assets/img/lightAndShadow/cloud.JPG");
 }
 
 nav {
@@ -35,44 +42,39 @@ nav {
 }
 
 h1 {
+    font-family: "Sacramento", century-gothic, "Big Daily Short Semilight", sans-serif;
     font-style: normal;
     font-weight: normal;
     position: absolute;
-    font-size: 6rem;
-    letter-spacing: 1rem;
-    color: black;
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+    color: white;
     right: 2rem;
-    top: -3.8rem;
+    top: -0.5rem;
     animation: name-slide 3s ease-out alternate;
 }
-
 @keyframes name-slide {
     0%    { transform: translateX(30rem);}
     100%  { transform: translateX(0rem);}
 }
 
-#about-X {
-    font-size: 25pt;
-}
-
 h2 {
     position: absolute;
-    /* background: rgb(190, 192, 255); */
-    background: rgb(255, 255, 255);
-    color: rgb(167, 167, 167);
-    border: 4px solid rgb(167, 167, 167);
+    color: rgb(255, 167, 166);
+    border: 4px solid rgb(255, 167, 166);
     font-size: 17pt;
     letter-spacing: 0.5rem;
     top: 2.5rem;
     left: -4.5rem;
     padding: 0.3rem 1.25rem 1rem 1.25rem;
     transform: rotate(90deg);
+    z-index: 1;
     cursor: pointer
 }
 
 #about {
     position: absolute;
-    background: rgb(167, 167, 167);
+    background: rgb(255, 207, 206);
     width: 35%;
     font-size: 16pt;
     text-indent: 0rem;
@@ -96,17 +98,18 @@ br {
 }
 
 .main-container {
-    background: rgb(222, 222, 222);
-    height: 50rem;
+    /* background: rgb(199, 199, 199); */
+    height: 50%;
     width: 90%;
     box-sizing: border-box;
     display: flex;
     margin-top: 3rem;
     margin-left: 5.5rem;
+    box-shadow: 0rem 0rem 5rem white;
 }
 
 .project-box {
-    height: 45rem;
+    height: 70vh;
     flex: 1;
     transition: 1.5s;
     overflow-y: scroll;
@@ -119,18 +122,15 @@ br {
 .main-ul {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    /* margin-left: -7rem; */
-    filter: blur(5px);
+    filter: blur(150px) grayscale(100%);
 }
 .main-ul:hover {
-    filter: blur(0px);
+    filter: blur(0px) grayscale(0%);
 }
-
 .main-li {
     list-style: none;
     text-align: center;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin: 2rem 0 2rem 0;
 }
 
 h4 {
@@ -140,34 +140,26 @@ h4 {
     font-weight: normal;
     font-style: italic;
     text-align: left;
-    position: absolute;
-    width: 60%;
-    margin-left: 5rem;
+    margin: 0 auto 0 5rem;
     z-index: 1;
 }
-  
-/* .main-li:hover h4 {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .2s, visibility .2s;
-} */
 
 .main-image {
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
+    margin-bottom: 0rem;
     object-fit: scale-down;
-    padding-left: 10rem;
-    padding-right: 10rem;
     scroll-snap-align: start;
 }
 .main-image:hover {
-    width: 60%;
-    height: 60%;
+    width: 40rem;
+    height: 40rem;
     border-radius: 0%;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    margin: 1rem 10rem 1rem 10rem;
     transition: 0.5s;
+    /* box-shadow: 0.5rem 0.5rem 5px rgb(126, 126, 126); */
+    /* box-shadow: 0.5rem 0.5rem 5px rgb(122, 129, 158); */
 }
 
 .main-image-hovereffect {
@@ -175,36 +167,37 @@ h4 {
     height: 10rem;
     border-radius: 50%;
     object-fit: scale-down;
-    padding-left: 10rem;
-    padding-right: 10rem;
     scroll-snap-align: start;
     cursor: pointer;
 }
 .main-image-hovereffect:hover {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     border-radius: 0%;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding: 1rem 8rem 1rem 8rem;
     transition: 0.5s;
+    /* box-shadow: 0.5rem 0.5rem 5px rgb(147, 147, 147); */
+    /* box-shadow: 0.5rem 0.5rem 5px rgb(122, 129, 158); */
 }
 
 h3 {
+    font-family: "Pro Grotesk Light";
     position: fixed;
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 2rem;
-    letter-spacing: 1rem;
-    padding-left: 1rem;
+    letter-spacing: 1.3rem;
+    position:fixed;
+    margin-top: 16rem;
     transform: rotate(90deg);
 }
 
 #website-design {
     position: relative;
-    border-left: 4px solid white;
+    border-left: 3px solid rgba(255, 255, 255, 0.276);
 }
 #website-design h3 {
-    top: 26.5rem;
-    margin-left: -13.8rem;
+    top: 15.8rem;
+    margin-left: -14.5rem;
     animation: website-down 1s ease-out alternate;
 }
 @keyframes website-down {
@@ -214,12 +207,11 @@ h3 {
 
 #typography-design {
     position: relative;
-    border-left: 4px solid white;
-    margin-left: 1rem;
+    border-left: 3px solid rgba(255, 255, 255, 0.15);
 }
 #typography-design h3 {
-    top: 23.4rem;
-    margin-left: -10.6rem;
+    top: 11.5rem;
+    margin-left: -10.5rem;
     animation: typography-down 1.5s ease-out alternate;
 }
 @keyframes typography-down {
@@ -229,11 +221,11 @@ h3 {
 
 #illustration {
     position: relative;
-    border-left: 4px solid white;
+    border-left: 3px solid rgba(255, 255, 255, 0.15);
 }
 #illustration h3 {
-    top: 24rem;
-    margin-left: -11.5rem;
+    top: 13rem;
+    margin-left: -12rem;
     animation: typography-down 2s ease-out alternate;
 }
 @keyframes typography-down {
@@ -243,11 +235,11 @@ h3 {
 
 #animation {
     position: relative;
-    border-left: 4px solid white;
+    border-left: 3px solid rgba(255, 255, 255, 0.15);
 }
 #animation h3 {
-    top: 22rem;
-    margin-left: -9.4rem;
+    top: 10rem;
+    margin-left: -8.5rem;
     animation: animation-down 2.5s ease-out alternate;
 }
 @keyframes animation-down {
@@ -257,11 +249,11 @@ h3 {
 
 #lightAndShadow {
     position: relative;
-    border-left: 4px solid white;
+    border-left: 3px solid rgba(255, 255, 255, 0.15);
 }
 #lightAndShadow h3 {
-    top: 27rem;
-    margin-left: -14.5rem;
+    top: 16rem;
+    margin-left: -15rem;
     animation: lightandshadow-down 3s ease-out alternate;
 }
 @keyframes lightandshadow-down {
