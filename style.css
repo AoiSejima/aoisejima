@@ -219,7 +219,6 @@ h3 {
 .main-image {
     width: 100%;
     max-width: 25rem;
-    height: auto;
     margin: 1rem auto auto 5rem;
 }
 .main-image-hovereffect {
@@ -255,6 +254,9 @@ p {
     text-align: left;
     display: inline;
 }
+span{
+    font-style: italic;
+}
 
 .all-sliders {
     position: relative;
@@ -271,10 +273,10 @@ p {
 
 .nav-manual {
     position: absolute;
-    width: 30rem;
-    margin: 23rem auto auto 6rem;
     display: flex;
+    width: 30rem;
     justify-content: center;
+    margin: 23rem auto auto 6rem;
 }
 .manual-btn {
     border: 2px solid rgb(159, 159, 159);
@@ -308,6 +310,45 @@ p {
 #radio17:checked ~ .first {margin-left: -86.9vw;}
 #radio18:checked ~ .first {margin-left: -115.7vw;}
 #radio19:checked ~ .first {margin-left: -144.5vw;}
+
+/* .nav-auto {
+    position: absolute;
+    display: flex;
+    width: 30rem;
+    justify-content: center;
+    margin: 23rem auto auto 6rem;
+}
+.nav-auto div {
+    border-radius: 50%;
+    border: 2px solid red;
+    padding: 6px;
+    transition: 0.5s;
+}
+.nav-auto div:not(:last-child) {margin-right: 1rem;}
+
+#radio1:checked ~ .nav-auto .auto-btn1 {background: gray;}
+#radio2:checked ~ .nav-auto .auto-btn2 {background: gray;}
+#radio3:checked ~ .nav-auto .auto-btn3 {background: gray;}
+#radio4:checked ~ .nav-auto .auto-btn4 {background: gray;}
+#radio5:checked ~ .nav-auto .auto-btn5 {background: gray;} */
+
+/* #radio6:checked ~ .nav-auto .auto-btn1 {background: gray;}
+#radio7:checked ~ .nav-auto .auto-btn2 {background: gray;}
+#radio8:checked ~ .nav-auto .auto-btn3 {background: gray;}
+#radio9:checked ~ .nav-auto .auto-btn4 {background: gray;}
+
+#radio10:checked ~ .nav-auto .auto-btn1 {background: gray;}
+#radio11:checked ~ .nav-auto .auto-btn2 {background: gray;}
+#radio12:checked ~ .nav-auto .auto-btn3 {background: gray;}
+#radio13:checked ~ .nav-auto .auto-btn4 {background: gray;}
+
+#radio14:checked ~ .nav-auto .auto-btn1 {background: gray;}
+#radio15:checked ~ .nav-auto .auto-btn2 {background: gray;}
+#radio16:checked ~ .nav-auto .auto-btn3 {background: gray;}
+#radio17:checked ~ .nav-auto .auto-btn4 {background: gray;}
+#radio18:checked ~ .nav-auto .auto-btn5 {background: gray;}
+#radio19:checked ~ .nav-auto .auto-btn6 {background: gray;} */
+
 
 @media only screen and (max-width: 812px) {  
     img {
