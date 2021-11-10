@@ -206,6 +206,10 @@ h3 {
     max-width: 25rem;
     margin: 1rem auto auto 5rem;
 }
+#memory-image {
+    width: 20.5vw;
+    height: 55vh;
+}
 .main-image-hovereffect {
     width: 100%;
     max-width: 60rem;
@@ -248,8 +252,17 @@ span{
     overflow: hidden;
     margin: 1rem -5rem auto 5rem;
 }
+.all-sliders-vertical {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 3.4rem auto 5rem;
+}
 .slides {
     height: 32vh;
+    display: flex;
+}
+.slides-vertical {
+    height: 55vh;
     display: flex;
 }
 .slider-image {height: 100%;}
@@ -263,6 +276,13 @@ span{
     justify-content: center;
     margin: 23rem auto auto 6rem;
 }
+.nav-manual-vertical {
+    position: absolute;
+    display: flex;
+    width: 30rem;
+    justify-content: center;
+    margin: 38.5rem auto auto 2rem;
+}
 .manual-btn {
     border: 2px solid rgb(159, 159, 159);
     border-radius: 50%;
@@ -272,6 +292,8 @@ span{
 }
 .manual-btn:not(:last-child) {margin-right: 1rem;}
 .manual-btn:hover {background: gray;}
+
+input {display: none;}
 
 #radio1:checked ~ .first {margin-left: 0;}
 #radio2:checked ~ .first {margin-left: -29.3vw;}
@@ -295,6 +317,9 @@ span{
 #radio17:checked ~ .first {margin-left: -86.9vw;}
 #radio18:checked ~ .first {margin-left: -115.7vw;}
 #radio19:checked ~ .first {margin-left: -144.5vw;}
+
+#radio20:checked ~ .first {margin-left: 0vw;}
+#radio21:checked ~ .first {margin-left: -20.7vw;}
 
 /* .nav-auto {
     position: absolute;
